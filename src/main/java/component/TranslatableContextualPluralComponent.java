@@ -1,0 +1,3 @@
+package ua.com.minersstudios.gnuplusadventure.component;
+
+public interface TranslatableContextualPluralComponent extends TranslatableContextualComponent, TranslatablePluralComponent {}

@@ -17,7 +17,11 @@ public final class GettextWrapper implements net.kyori.adventure.translation.Tra
 	}
 	@Override public @NotNull Component translate(final @NotNull net.kyori.adventure.text.TranslatableComponent component, final @NotNull Locale locale) {
 		resources = ResourceBundle.getBundle(locale.toString());
-		return Component.text(MessageFormat.format(GettextResource.gettext(resources, component.key()), component.arguments()));
+		return Component.text(MessageFormat.format(GettextResource.gettext(resources, component.key()), component
+			.arguments()
+			.stream()
+			.map(e -> e.value())
+			.toArray()));
 	}
 	public @NotNull MessageFormat ngettext(final @NotNull String msgid, final @NotNull String msgid_plural, final long n, final @NotNull Locale locale) {
 		resources = ResourceBundle.getBundle(locale.toString());

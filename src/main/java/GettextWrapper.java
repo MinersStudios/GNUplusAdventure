@@ -27,27 +27,27 @@ public final class GettextWrapper implements net.kyori.adventure.translation.Tra
 		setResources(locale);
 		return Component.text(MessageFormat.format(GettextResource.gettext(resources, component.key()), getComponentArguments(component)));
 	}
-	public @NonNull MessageFormat ngettext(final @NonNull String msgid, final @NonNull String msgid_plural, final long n, final @NonNull Locale locale) {
+	public @NonNull MessageFormat translate(final @NonNull String msgid, final @NonNull String msgid_plural, final long n, final @NonNull Locale locale) {
 		setResources(locale);
 		return new MessageFormat(GettextResource.ngettext(resources, msgid, msgid_plural, n));
 	}
-	public @NonNull Component ngettext(final @NonNull TranslatablePluralComponent component, final @NonNull Locale locale) {
+	public @NonNull Component translate(final @NonNull TranslatablePluralComponent component, final @NonNull Locale locale) {
 		setResources(locale);
 		return Component.text(MessageFormat.format(GettextResource.ngettext(resources, component.key(), component.plural_key(), component.n()), getComponentArguments(component)));
 	}
-	public @NonNull MessageFormat npgettext(final @NonNull String msgctxt, final @NonNull String msgid, final @NonNull String msgid_plural, final long n, final @NonNull Locale locale) {
+	public @NonNull MessageFormat translate(final @NonNull String msgctxt, final @NonNull String msgid, final @NonNull String msgid_plural, final long n, final @NonNull Locale locale) {
 		setResources(locale);
 		return new MessageFormat(GettextResource.npgettext(resources, msgctxt, msgid, msgid_plural, n));
 	}
-	public @NonNull Component npgettext(final @NonNull TranslatableContextualPluralComponent component, final @NonNull Locale locale) {
+	public @NonNull Component translate(final @NonNull TranslatableContextualPluralComponent component, final @NonNull Locale locale) {
 		setResources(locale);
 		return Component.text(MessageFormat.format(GettextResource.npgettext(resources, component.context(), component.key(), component.plural_key(), component.n()), getComponentArguments(component)));
 	}
-	public @NonNull MessageFormat pgettext(final @NonNull String msgctxt, final @NonNull String msgid, final @NonNull Locale locale) {
+	public @NonNull MessageFormat translate(final @NonNull String msgctxt, final @NonNull String msgid, final @NonNull Locale locale) {
 		setResources(locale);
 		return new MessageFormat(GettextResource.pgettext(resources, msgctxt, msgid));
 	}
-	public @NonNull Component pgettext(final @NonNull TranslatableContextualComponent component, final @NonNull Locale locale) {
+	public @NonNull Component translate(final @NonNull TranslatableContextualComponent component, final @NonNull Locale locale) {
 		setResources(locale);
 		return Component.text(MessageFormat.format(GettextResource.pgettext(resources, component.context(), component.key()), getComponentArguments(component)));
 	}

@@ -13,7 +13,7 @@ import ua.com.minersstudios.gnuplusadventure.component.*;
  * Gettext wrapped as Translator.
  */
 @lombok.ToString @lombok.EqualsAndHashCode
-public final class GettextWrapper implements net.kyori.adventure.translation.Translator {
+public final class GettextTranslator implements net.kyori.adventure.translation.Translator {
 	private ResourceBundle resources;
 	private void setResources(final @NonNull Locale locale) {
 		resources = java.util.Objects.requireNonNull(ResourceBundle.getBundle(locale.toString()), MessageFormat.format("No resource bundle for locale {0} was found.", locale));
@@ -24,7 +24,7 @@ public final class GettextWrapper implements net.kyori.adventure.translation.Tra
 	/**
 	 * The constructor.
 	 */
-	public GettextWrapper() {}
+	public GettextTranslator() {}
 	@Override public @NonNull Key name() { return Key.key("gettext", "translations"); }
 	/**
 	 * gettext wrapper.

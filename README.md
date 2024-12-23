@@ -7,7 +7,7 @@ A GNU gettext wrapper library for [net.kyori.adventure](https://github.com/Kyori
 Add the GettextTranslator as a source to the GlobalTranslator by writing:
 
 ```java
-GlobalTranslator.translator().addSource(ua.com.minersstudios.gnuplusadventure.GettextTranslator);
+GlobalTranslator.translator().addSource(com.minersstudios.gnuplusadventure.GettextTranslator);
 ```
 
 Then use the appropriate `translate()` method to get translations from the resource

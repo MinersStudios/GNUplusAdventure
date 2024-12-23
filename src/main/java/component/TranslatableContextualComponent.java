@@ -1,4 +1,4 @@
-package ua.com.minersstudios.gnuplusadventure.component;
+package com.minersstudios.gnuplusadventure.component;
 
 /**
  * TranslatableComponent with context.

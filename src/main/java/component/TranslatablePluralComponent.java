@@ -1,4 +1,4 @@
-package ua.com.minersstudios.gnuplusadventure.component;
+package com.minersstudios.gnuplusadventure.component;
 
 /**
  * TranslatableComponent with plural form of the message and the quantity of

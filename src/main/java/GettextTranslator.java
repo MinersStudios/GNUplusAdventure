@@ -1,4 +1,4 @@
-package ua.com.minersstudios.gnuplusadventure;
+package com.minersstudios.gnuplusadventure;
 import gnu.gettext.GettextResource;
 import java.text.MessageFormat;
 import java.util.Locale;
@@ -7,7 +7,7 @@ import lombok.NonNull;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TranslationArgument;
-import ua.com.minersstudios.gnuplusadventure.component.*;
+import com.minersstudios.gnuplusadventure.component.*;
 
 /**
  * Gettext wrapped as Translator.

@@ -3,7 +3,7 @@ plugins {
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
-group = 'ua.com.minersstudios'
+group = 'com.minersstudios'
 
 repositories {
 	mavenCentral()
